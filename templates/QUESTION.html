@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    
+    <title>Question entered</title>
+    
+  </head>
+  <body>
+    {% block body%}
+      <ul>
+        {%for question in Questions%}
+           <li>{{question}}</li>
+        {%endfor%}
+      </ul>
+    {%endblock%}
+  </body>
+</html>
