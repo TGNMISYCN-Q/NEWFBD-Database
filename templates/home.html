@@ -21,10 +21,10 @@
   <body>
     <div id='container'>
       <h1>FREE BODY DIAGRAM ANALYSIS</h1>
-      <form action='/questionupdate' method="post">
-        <p>Please enter the question.</p>
-        <p><input autofocus type="text" name="question" placeholder='Please enter the question...'></p>
-        <p><input type="submit"></p>
+      <form action='/Questionstore', method='post'>
+        {{include 'QUESTION.html'}}
+      </form>
+      
     </div>
     <div>
       <table class="table table-bordered">

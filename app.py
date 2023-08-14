@@ -7,6 +7,10 @@ app=Flask(__name__)
 def FBD():
   f=feedback_db()
   return render_template('home.html', feedback=f)
+
+@app.route('/')
+def index():
+    return render_template('add_input_box.html')
   
 @app.route('/api/feedback')
 def feedback():
@@ -16,9 +20,11 @@ def feedback():
 if __name__=='__main__':
   app.run(host='0.0.0.0',debug=True)
 
-@app.route('/questionstore')
+@app.route('/questionstore', methods=['post'])
 def questionstore():
-  return render_template('QUESTION.html', Questions=Questions)
+  QUESTION=request.form
+  #store into db
+  return jasonify(QUESTION)
            
 Questions=[]
 @app.route('/questionupdate', methods=['POST'])

@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    
-    <title>Question entered</title>
-    
-  </head>
-  <body>
-    {% block body%}
-      <ul>
-        {%for question in Questions%}
-           <li>{{question}}</li>
-        {%endfor%}
-      </ul>
-    {%endblock%}
-  </body>
-</html>
+<div>
+  <div class='mb-2'>
+    <label>Please enter the question here</label>
+    <p><textarea name="question" placeholder='Please enter the question...'></textarea></p>
+  </div>
+  <div>
+    <label for="inputState" class="form-label">Please choose a body.</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>Square</option>
+      <option>Triangle</option>
+      <option>Sphere</option>
+    </select>
+  </div>
+  <div>
+    <label class="form-label">Please input the angle of the incline plane, enter 0 if there isn't.</label>
+    <input type="text" class="form-control" placeholder='Enter angle in bearing'>
+  </div>  
+  <div>
+    <label for="inputforce" class="form-label">Please enter the force that applys on the body.</label>
+    <div class="input-group">
+      <span class="input-group-text">Coordinate and bearing of force</span>
+      <input type="text" aria-label="Coordinate" class="form-control" placeholder='Coordinate'>
+      <input type="text" aria-label="Bearing" class="form-control" placeholder='Bearing'>
+    </div>
+  </div>
+  <div>
+    <p><input type="submit"></p>
+  </div>
+
+</div>
