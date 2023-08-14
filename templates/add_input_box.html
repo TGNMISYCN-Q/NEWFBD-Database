@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <script>
+        function addInputBox() {
+          var container = document.getElementById("input-container");      
+          var input = document.createElement("input");
+          input.type = "text";
+          input.name = "dynamic-input"
+          container.appendChild(input);
+        }
+    </script>
+  </head>
+  <body>   
+    <button onclick="addInputBox()">Add Input Box</button>   
+    <div id="input-container">
+      <div class="input-group">
+        <span class="input-group-text">Coordinate and bearing of force</span>
+        <input type="text" aria-label="Coordinate" class="form-control" placeholder='Coordinate'>
+        <input type="text" aria-label="Bearing" class="form-control" placeholder='Bearing'>
+      </div>
+    </div>
+  </body>
+</html>

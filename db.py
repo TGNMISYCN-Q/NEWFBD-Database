@@ -21,4 +21,4 @@ def feedback_db():
       result_dicts.append(dict(zip(column_names, row)))
   return result_dicts
 
-print(feedback_db())
+
