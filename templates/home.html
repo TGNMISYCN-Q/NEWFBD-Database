@@ -25,7 +25,25 @@
         <p>Please enter the question.</p>
         <p><input autofocus type="text" name="question" placeholder='Please enter the question...'></p>
         <p><input type="submit"></p>
-
+    </div>
+    <div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>  
+            <th scope="col">id</th>
+            <th scope="col">Force/User</th>
+            <th scope="col">Force/Answer</th>
+            <th scope="col">Direction/User</th>
+            <th scope="col">Direction/Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for fb in feedback %}
+            {%include 'feedback.html'%}
+          {%endfor%}
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
