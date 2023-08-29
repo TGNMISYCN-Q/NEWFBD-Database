@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4a3997;
+}
+
+.canvas-container {
+    border: 2px solid #d36464;
+}
+
+canvas {
+    border: 1px solid #78b1bf;
+    cursor: crosshair;
+}
+
+button {
+    margin-top: 10px;
+}

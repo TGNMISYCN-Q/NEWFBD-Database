@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <script>
@@ -11,14 +10,15 @@
         }
     </script>
   </head>
-  <body>   
-    <button onclick="addInputBox()">Add Input Box</button>   
-    <div id="input-container">
-      <div class="input-group">
-        <span class="input-group-text">Coordinate and bearing of force</span>
-        <input type="text" aria-label="Coordinate" class="form-control" placeholder='Coordinate'>
-        <input type="text" aria-label="Bearing" class="form-control" placeholder='Bearing'>
+  <body>  
+      <div id="input-container">
+        <div class="input-group">
+          <span class="input-group-text">Coordinate and bearing of force</span>
+          <input type="text" aria-label="Coordinate" class="form-control" placeholder='Coordinate, eg. 2,1'>
+          <input type="text" aria-label="Bearing" class="form-control" placeholder='Bearing'>
+        </div>
+        <button onclick="addInputBox()">Add Input Box</button>   
       </div>
-    </div>
+   
   </body>
 </html>

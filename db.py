@@ -21,4 +21,13 @@ def feedback_db():
       result_dicts.append(dict(zip(column_names, row)))
   return result_dicts
 
+def questionform():
+  with engine.connect() as conn:
+    question_store=[]
+    #result = conn.execute(text("select * from questionstore"))
+    column_names = result.keys()
+    for row in result:
+      result_dicts.append(dict(zip(column_names, row)))
+  return question_store
+
 
